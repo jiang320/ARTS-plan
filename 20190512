@@ -1,0 +1,103 @@
+
+2019.05.12
+1.Algorithm
+
+ code
+   1. Two Sum
+  myanswer
+  class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] t=new int[2];
+       for(int i=0;i< nums.length ;i++)
+         {for(int j=i+1;j<nums.length;j++)
+               {if(nums[i]+nums[j]==target)
+                         {
+                   t[0]=i;
+                  t[1]=j; 
+                        } 
+             
+                }
+         }
+        return t;
+    } 
+}
+7. Reverse Integer
+我的答案，，
+public class test20190510code2 {
+    public static void main(String[] args) {
+
+        #int target = -123;
+        int result=0;
+        String xx = String.valueOf(x);
+        char[] chars = xx.toCharArray();
+        char[] charsCopy = chars.clone();
+        System.out.println(chars[0]);
+        if (chars[0] == '-') {
+            charsCopy=myReverseChar(chars,1);
+            result=-(Integer.valueOf(String.valueOf(charsCopy)).intValue());
+        }
+        if (chars[0] != '-') {
+            charsCopy=myReverseChar(chars,0);
+            result=Integer.valueOf(String.valueOf(charsCopy)).intValue();
+            }
+      return result;
+        }
+
+
+    public  static char[] myReverseChar(char[] target, int start)
+    {
+        char[] charsCopy = target.clone();
+        if (start==0) {
+            for (int i = start; i < target.length; i++) {
+                charsCopy[i] = target[target.length - 1 - i];
+            }
+        }
+        else{
+            for (int i = start; i < target.length; i++) {
+                charsCopy[i] = target[target.length - i];
+            }
+        }
+  return charsCopy;
+}
+}
+2.review 英文文章
+Scalable Web Architecture and Distributed Systems
+Kate Matsudaira
+
+来自 <http://www.aosabook.org/en/distsys.html> 
+笔记，概括一下：文章很长，但是生词很少，科普入门不错
+some of the key principles that influence the design of large-scale web systems:
+Availability:
+Performance:
+Reliability:
+Scalability: 
+Manageability: 
+Cost: 
+ some of the core factors that are central to almost all large  web applications: 
+services,
+ redundancy, 
+partitions, 
+handling failure. 
+
+ 
+The Building Blocks of Fast and Scalable Data Access
+  used to make data access a lot faster
+Caches
+Global Cache
+Distributed Cache
+
+when the data isn't in the cache
+
+Proxies
+Indexes
+Load Balancers
+Queues
+
+3.TIP
+dhclient
+dhclient命令可以释放你的电脑的IP地址并从DHCP服务器上获得一个新的
+，vim的文章，可以长期学习
+https://github.com/oldratlee/vim-practice
+
+4.Java 网络IO编程总结（BIO、NIO、AIO均含完整实例代码），这篇文章内容很丰富，我只看了一遍，以后还要再反复看
+<https://blog.csdn.net/anxpp/article/details/51512200> 
