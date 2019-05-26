@@ -1,0 +1,71 @@
+2019.05.26
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章1.Algorithm
+
+1.8. String to Integer (atoi)
+ if(str.length()<= 0)
+         {return 0;}
+      int n=str.length();
+        String [] s=new String[n];
+        StringBuffer sb = new StringBuffer();
+        boolean flag=false;//标识正负值
+        for(int i=0,j=0;i<=str.length()-1;i++)
+        {
+            if( i==0&&!Character.isDigit(str.charAt(i))&&str.charAt(i)!='-')
+            { return 0;}
+            if( i>0&&!Character.isDigit(str.charAt(i)))
+            { break;}
+            if( str.charAt(i)==' ')
+                { continue;}
+            if(str.charAt(i)=='-')
+                {
+
+                    flag=true;
+
+                }
+            if(Character.isDigit(str.charAt(i)))
+                {
+                    s[j]=String.valueOf(str.charAt(i));
+                    sb.append(s[j]);//合并字符
+                    j++;
+                }
+        }
+        //int b=Integer.valueOf(sb.toString());
+         double b=Double.valueOf(sb.toString());
+
+        if(flag)
+        {
+
+            if(b>Integer.MAX_VALUE)
+            {return -Integer.MIN_VALUE;  }
+            return -Integer.valueOf(sb.toString());
+        }
+        else
+        {
+            if(b>Integer.MAX_VALUE )
+            {return Integer.MAX_VALUE;  }
+            return  Integer.valueOf(sb.toString());
+        }
+2.https://www.cs.cornell.edu/home/rvr/papers/flowgossip.pdf
+Efficient Reconciliation and Flow Control
+for Anti-Entropy Protocol 
+don't know what it mean 
+3.vim光标移动
+光标移动到文件的第一百行 100gg
+把光标移动这一行的结尾 $
+移动到这一行的行首  0（数字0）
+  调到文件第一行
+	  1：输入:0或:1，然后回车；
+    2：在键盘按下小写gg；
+  调到文件最后一行
+	  1：输入:$，然后回车；
+	  2：在键盘按下大写G ；
+    3：在键盘按Shift + g；
+命令行模式下输入 u 可以撤销上一次的操作
+4.构建可扩展的机器学习系统（一）：你所需的架构设计知识
+https://www.infoq.cn/article/LhsS8P27OTOhrE*A35lE
