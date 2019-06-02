@@ -1,3 +1,12 @@
+2019.05.26
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章1.Algorithm
+1.（14） . Longest Common Prefix
 static String longestCommonPrefix(String[] strs)
     {
         Map<Integer,String> map=new HashMap<Integer,String>();
@@ -40,4 +49,12 @@ static String longestCommonPrefix(String[] strs)
 
     }
     
-    第二
+ 2.The SOLID Principles, Explained with Motivational Posters
+ https://blogs.msdn.microsoft.com/cdndevs/2009/07/15/the-solid-principles-explained-with-motivational-posters/
+ 3.du：查询文件或文件夹的磁盘使用空间
+du -h --max-depth=1 /home
+
+du -h --max-depth=1 /home/* 列出home下面所有一级目录的一级目录文件大小。
+查看linux cpu和内存利用率__linux － top命令
+4.
+38个MySQL数据库的小技巧
