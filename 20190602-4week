@@ -1,0 +1,43 @@
+static String longestCommonPrefix(String[] strs)
+    {
+        Map<Integer,String> map=new HashMap<Integer,String>();
+        List<String> list=new ArrayList<String>();
+//map的用Integer，Map的取值遍历操作
+//存第一个的组合
+        for(int j=0;j<strs[0].length();j++)
+        {
+
+            map.put(j,strs[0].substring(0,j+1));
+
+        }
+//遍历第二个的，并存下来
+        int i=1;
+        for(;i< strs.length;i++)
+        {
+            int j=1;
+            for(;j<=strs[i].length();j++)
+            {
+
+                if(map.containsValue(strs[i].substring(0,j)))
+//substring,从0开始的，不要过界
+                {
+                    System.out.println(strs[i].substring(0,j));
+                    continue;}
+//这里break的用法，思路一定要注意，是退出循环，停止循环
+                    break;
+            }
+            if(j>0) {
+                list.add(strs[i].substring(0, j-1));
+            }
+
+        }
+         if(list.get(0)!=list.get(1)){
+             return list.get(0).length()>list.get(1).length()?list.get(1):list.get(0);
+         }
+         else{
+            return list.get(0);
+         }
+
+    }
+    
+    第二
