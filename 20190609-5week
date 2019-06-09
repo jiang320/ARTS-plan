@@ -1,0 +1,59 @@
+2019.06.09
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+1.int romanCharToInt(char ch){
+    int d = 0;
+    switch(ch){
+        case 'I':  
+            d = 1;  
+            break;  
+        case 'V':  
+            d = 5;  
+            break;  
+        case 'X':  
+            d = 10;  
+            break;  
+        case 'L':  
+            d = 50;  
+            break;  
+        case 'C':  
+            d = 100;  
+            break;  
+        case 'D':  
+            d = 500;  
+            break;  
+        case 'M':  
+            d = 1000;  
+            break;  
+    }
+    return d;
+}
+int romanToInt(string s) {
+    if (s.size()<=0) return 0;
+    int result = romanCharToInt(s[0]);
+    for (int i=1; i<s.size(); i++){
+        int prev = romanCharToInt(s[i-1]);
+        int curr = romanCharToInt(s[i]);
+        //if left<right such as : IV(4), XL(40), IX(9) ...
+        if (prev < curr) {
+            result = result - prev + (curr-prev);
+        }else{
+            result += curr;
+        }
+    }
+    return result;
+}
+这周主要是看动态规划的题目， 
+2.Time, Clocks and the Ordering of Events in a Distributed System
+https://www.microsoft.com/en-us/research/publication/time-clocks-ordering-events-distributed-system/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fum%2Fpeople%2Flamport%2Fpubs%2Ftime-clocks.pdf
+
+3.用复合索引代替单索引,
+在创建复合索引时应该将最常用作限制条件的列放在最左边，依次递减
+原理是：最佳左前缀特性
+4.分布式系统的事务处理
+https://coolshell.cn/articles/10910.html
