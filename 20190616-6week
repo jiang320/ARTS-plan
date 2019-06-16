@@ -1,0 +1,110 @@
+2019.06.16
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+1.
+12
+integerToRoman
+
+string intToRoman(int num){
+      string symbol[]={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+      int value[] ={1000,900,500,400, 100, 90,  50, 40,  10, 9,   5,  4,   1};
+      string result;
+      
+      for(int i=0;num!=0;i++)
+          {
+          while(num>=value[i])
+          {
+          num-=value[i];
+          result+=symbol[i];
+          }
+          }
+          return result;
+}
+
+int main(int argc,char** argv)
+{
+    int num=1234;
+    if(argc>0)
+    {num=atoi(argv[1]);}
+    cout <<num<<":" << intToRoman(num)<< endl;
+    return;
+}
+13
+romanToInteger
+int romanCharToInt(char ch)
+{
+int d=0;
+switch(ch)
+{
+        case 'I':  
+            d = 1;  
+            break;  
+        case 'V':  
+            d = 5;  
+            break;  
+        case 'X':  
+            d = 10;  
+            break;  
+        case 'L':  
+            d = 50;  
+            break;  
+        case 'C':  
+            d = 100;  
+            break;  
+        case 'D':  
+            d = 500;  
+            break;  
+        case 'M':  
+            d = 1000;  
+            break; 
+
+}
+return d;
+}
+int romanToInt(string s)
+{
+if(s.size()<=0) return 0;
+int result=romanCharToInt(s[0]);
+for(int i=1;i<s.size();i++)
+{
+int prev=romanCharToInt(s[i-1]);
+int curr=romanCharToInt(s[i]);
+
+if(prev<curr)
+{
+result=result-prev+(curr-prev);
+}
+else{
+result+curr;
+}
+}
+return result;
+}
+
+
+
+
+2.Dynamo: Amazon’s Highly Available Key-value Store ;
+好长，一天三页，大概知道干什么的，但是有些不懂
+http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf
+3.
+any关键词可以理解为“对于子查询返回的列中的任一数值，如果比较结果为true，则返回true”。
+all的意思是“对于子查询返回的列中的所有值，如果比较结果为true，则返回true”
+not in 是 “<>all”的别名
+in 与“=any”是相同
+不同条件的分组
+先用group by 进行分组，然后再在每一个组中，使用case when 语句进行一行一行的判断，并且取值
+SELECT country, 
+    SUM( CASE WHEN sex = '1' THEN  population ELSE 0 END),  --男性人口 
+    SUM( CASE WHEN sex = '2' THEN  population ELSE 0 END)   --女性人口
+FROM  Table_A  
+GROUP BY country;
+
+4.
+秒懂，Java 注解 （Annotation）你可以这样学
+https://blog.csdn.net/briblue/article/details/73824058
