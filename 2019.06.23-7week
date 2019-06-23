@@ -1,0 +1,64 @@
+2019.06.23
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+1.
+20. Valid Parentheses
+
+
+class Solution {
+private HashMap<Character,Character> mappings;
+public Solution(){
+this.mappings =new HashMap<Character,character>();
+this.mappings.put(')','(');
+this.mappings.put('}', '{');
+this.mappings.put(']', '[');
+}
+
+public boolean isValid(String s)
+{
+Stack<Character> stack=new Stack<Character>();
+
+for(int i=0;i<s.length();i++)
+{
+char c=s.charAt(i);
+if(this,.mappings.containsKey(c))
+{
+    char topElement=stack.empty()?'#':stack.pop();
+
+     if(topElement!=this.mappings.get(c))
+        {return false;}
+
+}
+else{
+stack.push(c);
+}
+
+}
+return stack.isEmpty();
+
+}
+ 
+}
+
+
+
+2.
+Naive Bayes classifier in 50 lines
+https://ebiquity.umbc.edu/blogger/2010/12/07/naive-bayes-classifier-in-50-lines/
+
+
+3.
+这个星期，主要是熟悉docker了。
+docker rm：使用这个命令就可以删除某个容器，这里跟删除镜像的区别是这里少了一个 i 啦。
+需要注意的是通过stop和kill停止的容器还存在于Docker中，而使用 rm 命令操作后的容器将不再存在。
+
+
+4.
+从分布式一致性到共识机制（二）Raft算法
+https://www.cnblogs.com/binyue/p/8647733.html
