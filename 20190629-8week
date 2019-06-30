@@ -1,0 +1,46 @@
+2019.06.29
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+1.
+19
+public ListNode removeNthFromEnd(ListNode head,int n){
+  ListNode dummy=new ListNode(0);//辅助空节点
+  dummy.next=head;//将其指向头指针，
+  int length=0;//初始化长度
+  ListNode first=head;//复制一份
+  while(first !=null){//判断非空，计算长度
+    lengh++;//夹1，长度
+    first=first.next;//指针向后移动
+    }
+    length-=n;//得到从头指针算起的号码
+    first=dummy;//将辅助指针指向第零个辅助节点
+    while(length>0){//当长度大于0，循环找到那个指针的上一个
+      length--;
+      first=first.next;
+      }
+    first.next=first.next.next;//将前一个指针的指针指向当前指针的指向域
+    return dummy.next;//返回辅助指针的下一个指针域，也就是新的结果
+
+
+2.WHY OVER-REUSING IS BAD
+https://tech.transferwise.com/why-over-reusing-is-bad/
+https://github.com/binhnguyennus/awesome-scalability
+过度重用有利有弊。
+
+
+3.排序对应的四个窗口函数为：rank、dense_rank、row_number、ntitle
+rank：计算排序时，如果存在相同位次的记录，则会跳过之后的位次。
+dense_rank：计算排序时，即使存在相同位次的记录，也不会跳过之后的位次。
+row_number：赋予唯一的连续位次。
+ntitle：用于将分组数据按照顺序切分成n片，返回当前切片值
+
+4.细说反射，Java 和 Android 开发者必须跨越的坎
+https://blog.csdn.net/briblue/article/details/74616922
+Raft 一致性算法论文译文
+https://www.infoq.cn/article/raft-paper/
