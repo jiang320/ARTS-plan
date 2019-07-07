@@ -1,0 +1,39 @@
+2019.07.07
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+1.
+21. Merge Two Sorted Lists
+class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+       if(l1==null) return l2;//
+       if(l2==null) return l1;//相当于只有一个
+       if(l1.val<l2.val){//此处相当于递归的思路，因为每一步都是前一步的复制
+       l1.next=mergeTwoLists(l1.next,l2);
+       return l1;}
+       else{
+       l2.next=mergeTwoLists(l1,l2.next);
+       return l2;}
+    }
+}
+
+
+
+2.Dissecting the Disruptor: Why it's so fast (part one) - Locks Are Bad
+http://mechanitis.blogspot.com/2011/07/dissecting-disruptor-why-its-so-fast.html
+讲的是disruptor的内容，手绘的图解很不错的讲解，这是一系列的博客
+3.
+这周也没也没什么技巧性的东西
+将图形化界面切换为命令行，输入命令systemctl set-default multi-user.target 
+将命令行切换成图形化界面的命令systemctl set-default graphical.target
+Google的代码风格规范，各种语言都很全
+https://github.com/jiang320/styleguide
+https://google.github.io/styleguide/javaguide.html
+4.代码重构
+讲的以swift语言作为例子，可以很好的复习一下，重构那本书的内容，感觉受益无穷
+https://www.cnblogs.com/pureEve/p/6707277.html
