@@ -1,0 +1,67 @@
+2019.08.04
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.
+35. Search Insert Position
+public int searchInsert(int[] nums, int target){
+  int len=nums.length;
+  if(nums[len-1]<target){
+  return len;
+  ]
+  
+  
+  int left =0;
+  int right=len-1;
+  while（left<=right）{
+  int mid=(left+right)/2
+  if(nums[mid]==target){
+  return mid;
+  }else if(nums[mid]<target){
+  left=mid+1;
+  }else{
+  right=mid-1;
+  }
+  }
+  return left;
+  }
+
+
+
+
+
+2.WHY OVER-REUSING IS BAD
+https://tech.transferwise.com/why-over-reusing-is-bad/
+
+It does not matter how fast you can build the first version of your product. It only matters how fast you can change it later.
+
+3.iterator的实现原理
+源码
+
+ Node<E> node(int index) {
+        // assert isElementIndex(index);
+if (index < (size >> 1)) {
+            Node<E> x = first;
+            for (int i = 0; i < index; i++)
+                x = x.next;
+            return x;
+        } else {
+            Node<E> x = last;
+            for (int i = size - 1; i > index; i--)
+                x = x.prev;
+            return x;
+        }
+    }
+其中第三行判断index是不是超过size的一般，选择从后first还是last
+
+4.
+
+https://www.cnblogs.com/zhutianpeng/p/4190598.html
+postgres启动过程分析
+ pg的启动命令./bin/postgres -D path/to/data。
