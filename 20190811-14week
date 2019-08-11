@@ -1,0 +1,52 @@
+2019.08.11
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+38, count and say
+public static String countAndSay(int n){
+return countHelper("1",n);
+
+private static String countHelper(String str,int n){
+if(n==1) return str;
+else{
+StringBuilder stringBuilder=new StringBuilder();
+int i=0;
+while(i<str.length()){
+  int count=1;
+  while(i<str.length()-1&&str.charAt(i)==str.charAt(i+1)){
+    count++;
+    i++;
+    }
+   stringBuilder.append(Integer.toString(count)+str.charAt(i));
+   i++;
+   }
+   str=stringBuilder.toString();
+   }
+   return countHelper(str,n-1);
+   }
+   }
+  2.Java运行参数设置
+   <https://blog.csdn.net/zhangliao613/article/details/78560630> 
+  
+  
+  3.使用sudo nwtstat -lntup 可以查看到具体进程的名字
+  udp    22272      0 127.0.0.53:53           0.0.0.0:*                           838/systemd-resolve 
+  
+  ps aux | grep uwsgi
+  可以查看进程的状态是s,r
+  
+  注意配置文件中日志的存放地址
+  
+
+  
+  
+  4.Best Practices for Speeding Up Your Web Site
+  https://developer.yahoo.com/performance/rules.html?guccounter=1
