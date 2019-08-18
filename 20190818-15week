@@ -1,0 +1,70 @@
+2019.08.18
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+1.
+
+39
+组合综合
+
+
+public class Solution{
+  private List<List<Integer>> res = new ArrayList<>();
+  private int[] candidates;
+  privte int len;
+  
+  private void findCombinationSum(int residue,int start,Stack<Integer> pre){
+    if(residue==0){
+    res.add(new ArrayList<>(pre));
+    return;
+    }
+    for(int i=start;i<len&&residue-candidates[i]>=0;i++){
+    pre.add(candidates[i];
+    findCombinationSum(residue-candidates[i].i,pre);
+    pre.pop();
+    }
+    }
+    
+    
+    punlic List<List<Integer>> combinationSum(int [] candidates, int target){
+    int len=candidates.length;
+    if(len==0){
+    return res;
+    }
+
+2.
+Reddit: Lessons Learned From Mistakes Made Scaling To 1 Billion Pageviews A Month
+http://highscalability.com/blog/2013/8/26/reddit-lessons-learned-from-mistakes-made-scaling-to-1-billi.html
+3.
+nginx配置详解
+https://blog.csdn.net/shangdi1988/article/details/46756023
+这周搭建python的web项目
+对nginx有一些了解
+
+
+
+tail -f  xxx.log
+可以实时统计刚有的消息
+
+less  xxx.log
+然后输入G，可以最近查看文件历史
+
+free  -h 查看系统内存
+
+fgrep Port config/ * --color
+fgrep '47.xx.xxx.xxx' -r --color config/
+
+ netstat -nlp |grep  12017
+ 
+ echo $ENV_HOME打印变量
+ 
+ sudo权限看到的系统占用的端口更大
+
+4.会用这36个函数，小白也能入门数据分析
+
+https://blog.csdn.net/qq_37928340/article/details/97245529
