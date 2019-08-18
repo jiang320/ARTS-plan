@@ -36,6 +36,13 @@ public class Solution{
     if(len==0){
     return res;
     }
+    
+    Arrsys.sort(candidates);
+    this.len=len;
+    this.candidates=candidates;
+    findCombinationSum(target,0,new Stack<>());
+    return res;
+    }
 
 2.
 Reddit: Lessons Learned From Mistakes Made Scaling To 1 Billion Pageviews A Month
