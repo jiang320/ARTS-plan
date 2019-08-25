@@ -1,0 +1,55 @@
+2019.08.25
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+
+
+
+
+1.
+40. 组合总和 II
+public class Solution {
+  private void findCombinationSum2(int[] candidates, int begin, int len, int residue, Stack<Integer> stack, List<List<Integer>> res) {
+  if(residue==0){
+    res.add(new ArrayList<>(stack));
+    return;
+}
+for(int i=begin;i<len&&residue-candidates[i]>=0;i++){
+  if(i>begin&&candidates[i]==candidates[i-1]){
+continue;
+}
+stack.add(candidates[i]);
+findCombinationSum2(candidates,i+1,len,residue-candidates[i],stack,res);
+}
+}
+
+public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+int len=candidates.length;
+List<List<Integer>> res=new ArrayList<>();
+if(len==0){
+return res;}
+Arrays.sort(candidates);
+findCombinationSum2(candidates,0,len,target,new Stack<>(),res);
+return res;
+}
+
+
+
+2.
+Read-Through, Write-Through, Write-Behind, and Refresh-Ahead Caching
+https://docs.oracle.com/cd/E15357_01/coh.360/e15723/cache_rtwtwbra.htm#COHDG209
+没看懂
+3.Linux变量的含义
+$# 是传给脚本的参数个数
+$? 是显示最后命令的退出状态，0表示没有错误，其他表示有错误
+$0 是脚本本身的名字
+4.
+为了追求极致的性能，Kafka掌控这11项要领
+https://hiddenpps.blog.csdn.net/article/details/93772377
