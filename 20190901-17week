@@ -1,0 +1,49 @@
+2019.09.01
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+
+53. 最大子序和
+
+class Soletion{
+  public int maxSubArray(int[] nums){
+    in ans =nums[0];
+    int sum=0;
+    for(int num:nums){
+      if(sum>0){
+        sum+=num;
+        }else{
+        sum=num;
+        }
+        ans=Math.max(ns,sum);
+        }
+    return ans;
+    }
+    }
+ 2.
+ Stability patterns applied in a RESTful architecture
+Five ways to stabilize network behavior in distributed systems
+ https://www.javaworld.com/article/2824163/stability-patterns-applied-in-a-restful-architecture.html
+ 
+ 3.
+ Linux转化命令，很强悍
+tr [选项]… 集合1 [集合2]
+
+ bash脚本，自动输入sudo的密码
+ echo "admin" | sudo -S service tomcat7 stop
+
+ 
+ 4.linux命令总结之tr命令
+ https://www.cnblogs.com/ginvip/p/6354440.html
+ 
+ 
+ 
+ 
