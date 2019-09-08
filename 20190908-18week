@@ -1,0 +1,47 @@
+2019.09.08
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+56. 合并区间
+
+class Solution {
+    private class IntervalComparator implements Comparator<Interval> {
+    public int compare(Interval a,Interval b){
+      return a.start<b.start ? -1:a.start==b.start?0:1;
+      }
+    public List<Interval> merge(List<Interval> intervals){
+    Collections.sort(intervals,new IntervalComparator());
+    
+    LinkedList<Interval> merged=new LinkedList<interval>();
+    for(interval interval: intervals){
+      if(merged.isEmpty()||merged.getLast().end<interval.start){
+        merged.add(interval);
+        else{
+        merged.getLast().end=Math.max(merged.getLast().end,interval.end);
+        }
+        }
+        return merged;
+}
+
+2.
+Distributed Systems、Failures and Consensus
+https://www2.cs.duke.edu/courses/fall07/cps212/consensus.pdf
+3.
+tree -a  #显示全部
+sh -x sh15.sh #将使用到的 script 内容显示到屏幕上
+
+4.看完让你彻底搞懂Websocket原理
+https://www.cnblogs.com/fuqiang88/p/5956363.html
+Akka学习笔记：Actors介绍
+https://www.iteblog.com/archives/1154.html
+
+    
+  
