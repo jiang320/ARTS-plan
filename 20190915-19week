@@ -1,0 +1,35 @@
+2019.09.15
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+1.
+58. Length of Last Word
+class Solution {
+    public int lengthOfLastWord(String s) {
+
+int end =s.length()-1;
+while(end>=0&&s.charAt(end)=='')end--;
+if(end<0) return 0;
+int start=end;
+while(start>=0&&s.charAt(start)!='')start--;
+return end-start;
+
+
+
+2.http://notes.stephenholiday.com/Kafka.pdf
+Kafka: a Distributed Messaging System for Log Processing
+
+3.shell脚本一行太长，使用\换行
+向下翻 [Ctrl] + [f] 
+向前翻 [Ctrl] + [b] 
+移动到行头，按 0 ，移动到行尾按 $ 即可
+4.
+反射是框架设计的灵魂
+https://zhuanlan.zhihu.com/p/73710795
+老大难的 Java ClassLoader 再不理解就老了
+https://zhuanlan.zhihu.com/p/51374915
