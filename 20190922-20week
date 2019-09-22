@@ -1,0 +1,44 @@
+2019.09.22
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.
+10. 正则表达式匹配
+
+class Solution {
+    public boolean isMatch(String text, String pattern) {
+    if(pattern,isEmpty()) return text.isEmpty();
+    boolean first_match=(!text.isEmpty()&&(pattern.charAt(0)||pattern.charAt(0)=='.'));
+    
+    if(pattern.length()>=2&&pattern.charAt(1)=='*'){
+    return (isMatch(text,pattern,substring(2))||(first_match&&isMatch(text.substring(1),pattern)));
+    }else{
+    return first_match&&isMatch(text.substring(1),pattern.substring(1));
+    }
+   }
+}
+2.
+Graph Databases for Beginners: ACID vs. BASE Explained
+https://neo4j.com/blog/acid-vs-base-consistency-models-explained/
+3。
+字典/集合 生成
+字典/集合 生成
+my_dict = {i: i * i for i in xrange(100)} 
+my_set = {i * 15 for i in xrange(100)}
+
+字符串/数列 逆序
+>>> a = [1,2,3,4]
+>>> a[::-1]
+[4, 3, 2, 1]
+
+
+4.https://www.cnblogs.com/daoqidelv/p/7043696.html
+Disruptor——一种可替代有界队列完成并发线程间数据交换的高性能解决方案
+Disruptor3.0的实现细节
+https://www.cnblogs.com/daoqidelv/p/6995888.html
