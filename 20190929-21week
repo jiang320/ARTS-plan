@@ -1,0 +1,45 @@
+2019.09.29
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+1.
+69. x 的平方根
+public class Solution {
+  public int mySqrt(int x){
+    long left=0;
+    long right =x/2+1;
+    while(left<right){
+      long mid=left+right+1)>>>1;
+      long square=mid*mid;
+      if(square>x){
+          right=mid-1;
+      }else{
+      left=mid;
+      }
+      }
+      return (int) left;
+      }
+      
+      }
+
+      
+
+2.dubbo核心流程分析
+https://my.oschina.net/ywbrj042/blog/702521
+分析的架构，相当好，
+
+
+
+3.pycharm的快捷键，还是可以提高效率的，最近写的挺多，磨刀不误砍柴工
+Ctrl + Shift + J快捷键将两行合并为一行
+Ctrl + Shift + / 块注释
+Shift + Enter：在下方新建行并移到新行行首
+
+
+4.http://gee.cs.oswego.edu/dl/cpjslides/nio.pdf
+Java-NIO的PPT，其中的图的原理图，比较好。
