@@ -1,0 +1,38 @@
+2019.10.06
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.
+
+69. x 的平方根
+
+使用牛顿法
+public class Solution{
+  public int mySqrt(int a) {
+    long x=a;
+    while (x*x>a){
+      x=(x+a/x)/2;
+      }
+      return (int) x;
+      ]
+      ]
+      
+   2.
+   How Apache Kafka is Tested
+   https://www.confluent.io/blog/apache-kafka-tested/
+   
+   3.pycharm
+   shift + 上下键 来选择代码块
+  选中多行代码后，按下Tab键，一次缩进四个字符
+   shift+Tab键，一次左移四个字符
+    Ctrl+z   回退
+    
+    
+   4.【译】Kafka学习之路
+   https://www.cnblogs.com/huxi2b/p/6308999.html
