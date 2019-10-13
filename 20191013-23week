@@ -1,0 +1,53 @@
+20191013
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.把简单问题复杂化，抽象化
+70. 爬楼梯
+ public  class Solution{
+    public int climbStairs(int n){
+        int memo[] =new int [n +1];
+        return climb_stairs(0,n,memo);
+        }
+        
+      public int climb_Stairs(int i,int n,int memo[]){
+          if (i>n){
+          return 0;
+          }
+          if (i ==n){
+          return 1;
+          }
+          if (memo[i]>0){
+          return memo[i];
+          }
+          memo[i] =climb_Stairs（i+1,n,memo）+climb(i+2,n,memo);
+          return memo[i];
+
+2.
+Look at How a Regex Engine Works Internally
+
+https://www.regular-expressions.info/engine.html
+
+3.这周接触正则表达式比较多，有了更深刻的理解
+牢记*和？和+，其中对于匹配纯在贪婪模式，懒惰模式，独占模式
+对于空格匹配，\s  \t   \t\r\n
+
+对于python的程序异常，特别是list index Out of range ,可以通过try ,catch,跳过异常，继续执行
+
+python 对于excel 的操作，可以通过xlwt库操作
+
+数据库的查询，对于常用的列，在建立索引时，也要关注前端的调用是不是会使索引失效
+
+网络服务的启动方式  ps aux | grep 服务名   查看最后的启动命令
+
+top -H -p pid  查找占用CPU最多的线程
+4.
+啃碎并发（四）：Java线程Dump分析
+https://www.jianshu.com/p/f1db856022de
