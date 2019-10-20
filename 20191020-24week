@@ -1,0 +1,41 @@
+20191020
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+1.
+83. 删除排序链表中的重复元素
+
+class Solution {
+  public ListNode deleteDuplicates(ListNode head){
+      ListNode cur=head;
+      while(cur !=null &&cur.next !=null){
+        if(cur.val==cur.next.val){
+            cur.next=cur.next.next;
+            }else{
+            cur=cur.next;
+            }
+            }
+            return head;
+            
+ 2.tCache: Scalable Data-aware Java Caching at Trivago
+https://tech.trivago.com/2015/10/15/tcache/
+            
+3.Tip
+
+大文件传输，网络带宽更加珍贵，用CPU换带宽，能压缩就压缩
+
+后台进程，ssh登入，在终端登入后又退出，就会直接关闭开的程序
+在ssh客户端执行命令之后，默认他的父进程是ssh
+使用nohup   即  nohup  commond &
+split 命令可以分割文件
+
+4.<设计模式：各个模式间的对比>
+<https://hiddenpps.blog.csdn.net/article/details/51245096>
+
+
