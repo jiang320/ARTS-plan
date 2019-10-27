@@ -1,0 +1,41 @@
+20191027
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.
+
+88. 合并两个有序数组
+
+class Solution{
+  public void merge(int[] nums1,int m,int[] nums2,int n){
+    int p1=m-1
+    int p2=n-1;
+    
+    int p=m+n-1;
+    
+    while((p1>=0)&&(p2>=0))
+      {nums1[p--]=(nums1[p1]<nums2[p2])?nums2[p2--]:nums1[p1--];}
+     System.arraycopy(nums2,0,nums1,0,p2+1);
+     }
+     }
+     
+     
+  2.THINKING INSIDE THE CONTAINER
+  https://technology.riotgames.com/news/thinking-inside-container
+     
+ 3.这周任务有使用docker
+ docker exec -it containerID /bin/bash  不能进入容器是，使用下面的命令，也可以进入
+ sudo docker run -it --entrypoint=/bin/bash <imagename>
+ 
+ 
+ 
+ 4.python中yield的用法详解——最简单，最清晰的解释
+ https://blog.csdn.net/mieleizhi0522/article/details/82142856
+ 
