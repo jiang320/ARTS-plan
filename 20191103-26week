@@ -1,0 +1,49 @@
+20191103
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+1.
+100 仙童的树
+
+boolean isSameTree(TreeNode root1,TreeNode root2){
+  if(root1==null&&root2==null) return true;
+  if(root1==null|| root2==null) return false;
+  
+  if(root1.val!=root2.val) return false;
+  
+  return isSameTree(root1.left,root2.left)&&isSameTree(root1.right,root2.right);
+  }
+  
+  
+  2.
+  Dockerizing MySQL at Uber Engineering
+  https://eng.uber.com/dockerizing-mysql/
+
+3.
+sar 查看网卡流量
+sar -n DEV #查看当天从零点到当前时间的网卡流量信息
+sar -n DEV 1 10 #每秒显示一次，共显示10次
+批量删除容器
+docker ps -a | awk '{print $1}' | xargs docker rm
+批量杀掉名字名包括 "cleardata"的进程
+for i in `ps -ef|grep cleardata |awk '{print $2}' `; do kill -9 $i ; done;
+
+date +%F-%T-%N
+2016-03-24-14:40:13-997433641
+%F   full date; same as %Y-%m-%d
+%T  time; same as %H:%M:%S
+%N  纳秒
+date  +%Y -%m-%d   年月日
+
+4.
+很多知识是一桶百通
+
+Java web学习（一）web那么多框架都是什么原理？其实大同小异
+https://blog.csdn.net/le_17_4_6/article/details/95610746
+
+
