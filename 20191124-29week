@@ -1,0 +1,51 @@
+20191124
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+107. 二叉树的层次遍历 II
+public List<List<Integer>> levelOrderBottom(TreeNode root){
+  List<List<Integer>> ans=new ArrayList<>();
+  DFS(root,0,ans);
+  return ans;
+  }
+  
+  private void DFS(TreeNode root,int level ,List<List<Integer>>ans){
+    if(root==null){
+    return;
+    }
+    if (ans.size()<=level){
+      ans.add(0,new ArrayList<>());
+      }
+      
+      ans.get(ans.size()-1-level).add(root.val);
+      DFS(root.left,level+1,ans);
+      DFS(root.left,level+1,ans);
+    }
+ 
+ 2.
+ Designing For Resiliency Will Be So 2013
+ 
+ http://highscalability.com/blog/2012/12/31/designing-for-resiliency-will-be-so-2013.html
+
+3.
+postgresql  计算SQL执行时间
+\timing
+du -lsh  当前目录大小
+ls -lh t*
+查看当前目录下文件名以“t”开头的所有文件的信息
+ss  -tan 查看所起容器状态和端口监听
+查看文件中的有效字段行
+cat 文件名 |grep -v "#"| grep -v "^$"
+
+4.
+PostgreSQL SQL log duration time 源码分析
+https://yq.aliyun.com/articles/33554
