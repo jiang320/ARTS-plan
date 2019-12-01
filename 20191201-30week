@@ -1,0 +1,58 @@
+20191201
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+107. 二叉树的层次遍历 II
+
+BFS
+
+public List<List<Integer>> levelOrderBottom(TreeNode root){
+   Queue<TreeNode> queue =new LinkedList<TreeNode>();
+   List<List<Integer>> ans=new LinkedList<List<Integer>>();
+   if(root==null)
+      return ans;
+    queue.offer(root);
+    
+    while(!queue.isEmpty()){
+      int levelNum=queue.size();
+      List<Integer> subList=new LinkedList<Integer>();
+      for(int i=0;i<levelNum;i++){
+        TreeNode curNode=queue.poll();
+        if(curNode!=null){
+          subList.add(curNode.val);
+          queue.offer(curNode.left);
+          queue.offer(curNode.right);
+        }
+      }
+      if (subList.size()>0){
+          ans.add(0,subList);
+      }
+     }
+     return ans;
+}
+
+
+2.
+Latency Is Everywhere And It Costs You Sales - How To Crush It
+http://highscalability.com/latency-everywhere-and-it-costs-you-sales-how-crush-it
+3.tips
+shell
+set -ex作用就是，当下面的命令执行出错后，就退出执行，不在继续往下执行
+# 停止所有容器
+docker ps -a | grep "Exited" | awk '{print $1}' | xargs docker stop
+强制不检查依赖，安装所有rpm包
+rpm-ivh docker/* --nodeps --force
+
+
+4.
+77%的Linux运维都不懂的内核问题
+https://mp.weixin.qq.com/s?__biz=MzA3OTgyMDcwNg==&mid=2650636685&idx=1&sn=fea9400e3261cef7d2fbe4c2e8dfe7b6&chksm=87a48340b0d30a567d38580198eaa205469e058f211d80dbaaa356d41fbc78ab4adc8df26b93&scene=21#wechat_redirect
