@@ -1,0 +1,50 @@
+20191208
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+108. 将有序数组转换为二叉搜索树
+
+public TreeNode sortedArrayToBST(int[] nums){
+  return sortedArrayToBST(nums,0,nums.length);
+  }
+  
+  private TreeNode sortedArrayToBST(int[] nums,int start,int end){
+    if (start==end) {
+      return null;
+     }
+     int mid =(start+end)>>>1;
+     TreeNode root=new TreeNode(nums[mid]);
+     root.left=sortedArrayToBST(nums,start,mid);
+     root.right=sortedArrayToBST(nums,mid+1,end);
+     
+     return root;
+     
+    }
+    
+2. 
+Introduction to Python Decorators
+https://www.artima.com/weblogs/viewpost.jsp?thread=240808
+    
+3.tips
+ 
+  rename from to file
+   Linux批量替换文件夹内的文件名，不用mv命令，
+这个命令有三个参数，分别是from ： 修改什么名字，to：改成什么名字，file 需要修改的文件是哪些。
+
+sed -i 's/old/new/g' file
+在file中插入操作，s为替换操作
+
+4.
+Python 中的容器 collections
+https://blog.csdn.net/u013486414/article/details/87210658
+
+4
