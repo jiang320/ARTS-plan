@@ -1,0 +1,47 @@
+20191215
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.
+110. 平衡二叉树
+public class BalancedBinaryTree {
+  boolean res=true;
+  
+  public boolean isBalanced(TreeNode root) {  
+    helper(root);
+    return res;
+   }
+   private int helper(TreeNode root) {
+    if (root ==null) return 0;
+    int left=helper(root.left) +1;
+    int right=helper(root.right)+1;
+    if(Math.abs(right-left)>1) res=false;
+    return Math.max(left,right);
+    }
+   }
+
+
+2.
+Measuring localStorage Performance
+https://www.stevesouders.com/blog/2014/02/11/measuring-localstorage-performance/
+3.shell
+
+set -e ： 执行的时候如果出现了返回值为非零，整个脚本 就会立即退出 
+set +e： 执行的时候如果出现了返回值为非零将会继续执行下面的脚本 
+shell定义变量时, =号的两边不可以留空格
+ 命令和其后的参数或对象之间一定要有空格
+ 取变量值的符号'$'和后边的变量或括号不能有空格
+ 
+ docker
+ --rm=true表示构建成功后，移除所有中间容器
+--no-cache=false表示在构建过程中不使用缓存
+
+4.docker-compose教程（安装，使用, 快速入门）
+https://blog.csdn.net/pushiqiang/article/details/78682323
