@@ -1,0 +1,60 @@
+20191222
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+111. 二叉树的最小深度
+class Solution {
+  public int minDepth(TreeNode root) {
+    if (root==null) return 0;
+     if (root.left==null&&root.right==null) return 1;
+     int m1=minDepth(root.left);
+     int m2=minDepth(root.right);
+     if(root.left==null||root.right==null) return m1+m2+1;
+     
+     return Math.min(m1,m2)+1;
+     }
+    }
+    
+简化
+class Solution {
+  public int minDepth(TreeNode root) {
+    if (root==null) return 0;
+    int m1=minDepth(root.left);
+    int m2=minDepth(root.right);
+    return root.left==null || root.right==null ?m1+m2+1:Math.min(m1+m2)+1;
+    }
+   }
+   
+   2.
+   How To Improve MySQL AWS Performance 2X Over Amazon RDS At The Same Cost
+   http://highscalability.com/blog/2019/10/29/how-to-improve-mysql-aws-performance-2x-over-amazon-rds-at-t.html
+   
+   
+   3.
+   linux shell取文本最后一行
+   sed -n '$p'
+   
+   dos2unix
+   将windows中文件格式转换成linux文件格式
+   curl -i https://www.mi.com > /dev/null没有任何结果
+   
+   $? 获取函数的返回值,获取上一个命令的退出状态
+  git add -u  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+ git add .  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+ git add -A  提交所有变化
+ 
+ 
+ 
+ 4.
+ 好代码是管出来的——Git的分支工作流与Pull Request
+ 
+ https://www.cnblogs.com/selimsong/p/9059964.html
