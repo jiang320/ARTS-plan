@@ -1,0 +1,64 @@
+20191229
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+1.
+
+112)路径总和
+public class TreeNode {
+  int val;
+  TreeNode left;
+  TreeNode right;
+  
+  TreeNode(int x) {
+    val=x;
+    }
+    }
+ class Solution{
+  public boolean hasPathSum(TreeNode root,int sum) {
+    if (root ==null) {return false;)
+    LinkedList<TreeNode> node_stack=new LinkedList();
+    LinkedList<Integer> sum_stack=new LinkedList();
+    node_stack.add(root);
+    sum_stack.add(sum-root.val);
+    
+    TreeNode node;
+    int curr_sum;
+    while(!node_stack.isEmpty()){
+      node=node_stack.pollLast();
+      curr_sum=sum_stack.pollLast();
+      if((node.right==null)&&(node.left==null)&&(curr_sum==0))
+        {return true;}
+      
+      if (node.right!=null) {
+        node_stack.add(node.right);
+        sum_stack.add(curr_sum-node.right.val);
+        }
+       if (node.left!=null) {
+        node_stack.add(node.left);
+        sum_stack.add(curr_sum-node.left.val);
+        }
+       }
+       return false;
+       }
+      }
+2.
+5 Things I’ve Learned in 20 Years of Programming
+https://daedtech.com/5-things-ive-learned-in-20-years-of-programming/
+      
+3.
+清掉浏览器静态缓存，Ctrl+shift+R
+seq -2 2 10 产生-2~10内的整数，增量为2
+ss -s 列出当前socket详细信息:
+ ss -l 显示本地打开的所有端口
+ ss -o state established '( dport = :http or sport = :http )' 显示所有已建立的HTTP连接
+ 
+ 4.
+ 关于Java并发编程的总结和思考
+ https://blog.csdn.net/jackfrued/article/details/44499227
