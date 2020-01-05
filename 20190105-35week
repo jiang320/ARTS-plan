@@ -1,0 +1,71 @@
+20191229
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+118. Pascal's Triangle
+
+class Solution {
+  public List<List<Integer>> generate(int numRows){
+    List<List<Integer>> triangle=new ArrayList<List<Integer>>();
+    
+    if(numRows==0){
+      return triangle;
+      }
+    triangle.add(new ArrayList<>());
+    triangle.get(0).add(1);
+    
+    for(int rowNum=1;rowNum<numRows;rowNum++){
+      List<Integer> row=new ArrayList<>();
+      List<Integer> preRow=triangle.get(rowNum-1);
+      
+      row.add(1);
+      
+      for (int j=1;j<rowNum;j++){
+        row.add(preRow.get(j-1)+prevRow.get(j));
+        }
+        
+        row.add(1);
+        triangle.add(row);
+        }
+        
+        return triangle;
+        }
+        }
+        
+        
+   2.
+   High Cohesion and Low Coupling
+  http://www.math-cs.gordon.edu/courses/cs211/lectures-2009/Cohesion,Coupling,MVC.pdf
+   
+   3.
+    lastlog -t 1 
+查看最近1天之内的登陆历史
+ lastlog -u test 
+查看用户test的登陆历史
+   
+   使用$()代替`(反单引号)
+   使用[[]]代替[]
+  
+  Linux 的字符串截取
+   变量 var从左边第几个字符开始，及字符的个数
+   echo ${var:0:5}
+其中的 0 表示左边第一个字符开始，5 表示字符的总个数。
+
+set -o errexit
+遇到执行出错，不会跳过并继续执行，而这往往不符合预期， 可以避免恶果扩大，终止脚本的执行。
+
+
+   4.
+   最全Linux应急响应技巧  
+   https://www.cnblogs.com/paul8339/p/12012088.html
+   七年老运维实战中的 Shell 开发经验总结【转】
+   https://www.cnblogs.com/paul8339/p/11935765.html
