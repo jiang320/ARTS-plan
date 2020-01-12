@@ -1,0 +1,50 @@
+20200112
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.
+119. 杨辉三角 II
+
+
+public List<Integer> getRow(int rowIndex){
+  List<Integer> pre=new ArrayList<>();
+  List<Integer> cur=new ArrayList<>();
+  for(int i=0;i<=rowIndex;i++){
+    cur=new ArrayList<>();
+    for(int j=0;j<=i;j++){
+      if(j==0||j==i){
+        cur.add(1);
+        }else{
+          cur.add(pre.get(j-1)+pre.get(j));
+         }
+        }
+        pre=cur;
+        }
+        return cur;
+       }
+
+
+2
+Google Architecture
+http://highscalability.com/google-architecture
+
+
+3.nginx
+alias 后面有没有“/” 要和location 后面“/” 保持一致，否则找不到资源文件
+proxy_pass  反向代理配置，用于代理请求，适用于前后端负载分离或多台机器、服务器负载分离的场景
+是否会附加location配置路径与【proxy_pass】配置的路径后是否有"/"有关，有"/"则不附加，proxy_pass 带“/”类似于alias
+
+
+
+4.
+Linux 套接字编程中的 5 个隐患
+https://www.ibm.com/developerworks/cn/linux/l-sockpit/
+数据库索引实现原理及查询优化
+https://blog.csdn.net/tengdazhang770960436/article/details/93980377
