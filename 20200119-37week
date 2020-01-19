@@ -1,0 +1,51 @@
+20200119
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.
+121. 买卖股票的最佳时机
+public class Solution{
+  public int maxProfit)(int prices[]) {
+    int minprice=Integer.MAX_VALUE;
+    int maxprofit=0;
+    for(int i=0;i<prices.length;i++) {
+      if(price[i]<minprice)
+        minprice=prices[i];
+       else if(prices[i] -minprice >maxprofit)
+        maxprofit =prices[i] -minprice;
+       }
+      return maxprofit;
+      
+   }
+
+2.Replication: weak consistency model protocols
+
+http://book.mixu.net/distsys/eventual.html
+3.
+   
+ 把远程分支拉到本地
+git fetch origin dev（dev为远程仓库的分支名）
+
+删除image
+docker image rm -f 镜像名
+
+构建镜像 
+ sudo docker build -t 镜像名 .
+ 
+ ae 为containerID 首位数字
+  docker logs -f ae
+  
+ docker prune： 用来删除不再使用的 docker 对象
+ 
+ 4.三层架构和MVC
+ 
+ https://www.cnblogs.com/DjangoBlog/p/5462870.html
+ 
+  
