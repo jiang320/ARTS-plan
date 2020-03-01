@@ -1,0 +1,63 @@
+20200301
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+1.
+125. Valid Palindrome
+
+public class Solution {
+  public boolean isPalindrome(String s) {
+    if(s.isEmpty()){
+      return true;
+     }
+     int head=0,tail =s.length()-1;
+     char cHead,cTail;
+     while(head<=tail){
+      cHead=s.charAt(head);
+      cTail=s.charAt(tail);
+      if(!=Character.isLetterOrDigit(CHead)){
+        head++;
+       }else if(!Character.isLetterOrDigit(cTail)){
+        tail--;
+        }else{
+          if(Character.toLowerCase(cHead) !=Character。toLowerCase(cTail)){
+              return false;
+              }
+              head ++;
+              tail -;
+         }
+       }    
+       
+       
+       return true;
+       }
+     }
+     
+     
+ 2.
+ PostgreSQL Performance Tuning Tutorial
+ https://stackify.com/postgresql-performance-tutorial/
+ 
+ 3.
+ 使用 DELETE 语句可以删除数据表里的所有数据。对于包含大量数据的表来说，使用 TRUNCATE TABLE 将更高效。
+TRUNCATE TABLE 语句在不扫描表的情况下，删除表里的所有数据。
+这就是它比 DELETE 快的原因。
+它立即回收存储空间，所以不必执行随后的 VACUUM 操作，这在数据量大的表里是非常有用的。
+
+
+top -H -p pid，查询占用cpu最高的线程pid
+
+jstack 进程pid | grep -A 20 '0x7d0'
+查找nid匹配的线程，查看堆栈，定位引起高cpu的原因
+4
+对cpu与load的理解及线上问题处理思路解读
+
+https://www.cnblogs.com/xrq730/p/11041741.html
