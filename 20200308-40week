@@ -1,0 +1,58 @@
+20200308
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+1.
+
+136. Single Number
+
+'class Solution {
+  
+ public int singleNumber(int[] nums){
+  
+    Map<Integer,Integer> map =new HashMap<>();
+    for(Integer i: nums){
+      Integer count=map.get(i);
+      count=count==null ? 1 :++count;
+      map.put(i,count);
+     }
+     for(Integer i:map.keySet()){
+        Integer count =map.get(i);
+        if(count==1){
+          return i;
+         }
+       }
+       return -1;
+      }
+     ]
+   2.
+   
+   SQL or NoSQL
+   https://engineering.salesforce.com/sql-or-nosql-9eaf1d92545b
+   
+   3.
+   ss -lnt
+   Send-Q表示当前端口的全连接队列大小，Recv-Q表示全连接队列当前使用了多少
+   
+   pandas中DataFrame的 
+   stack()是将原来的列索引转成了最内层的行索引
+   unstack()针对索引进行操作，最内层的行索引还原成了列索引
+   pivot()针对值进行操作
+   
+   正则表达式的贪心算法和非贪心算法
+   非贪心算法用?标志，即在特定的正则语法后面添加？
+   
+   
+   4.
+   与程序员相关的CPU缓存知识
+   https://coolshell.cn/articles/20793.html
+ 
+   
+   
