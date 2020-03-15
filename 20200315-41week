@@ -1,0 +1,49 @@
+20200315
+
+1.Algorithm：每周至少做一个 leetcode 的算法题
+
+2.Review：阅读并点评至少一篇英文技术文章
+
+3.Tip：学习至少一个技术技巧
+
+4.Share：分享一篇有观点和思考的技术文章
+
+
+
+
+1.
+141. 环形链表
+
+public boolean hasCycle(ListNode head) {
+  Set<ListNode> nodeSeen = new HashSet<>();
+  while (head !=null) {
+      if (nodesSeen.contains(head)) {
+        return true;
+       }else{
+         nodesSeen.add(head）；
+        }
+        head=head.next;
+       }
+      return false;
+     }
+     
+  2.
+  Index Table pattern
+ 
+  https://docs.microsoft.com/en-us/azure/architecture/patterns/index-table
+  
+  3.
+  jstat -gcutil pid   xxx
+显示xxx的堆分配情况以及垃圾回收次数时间
+
+jmap -histo:live pid 强制进行fullgc 查看实例数
+
+对于ThreadLocal使用前或者使用后一定要先remove
+
+postgres清空被外键引用的表
+TRUNCATE TABLE table_name CASCADE;
+
+4.
+
+一次线上JVM调优实践，FullGC40次/天到10天一次的优化过程
+https://blog.csdn.net/cml_blog/article/details/81057966?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
